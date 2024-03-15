@@ -1,0 +1,38 @@
+{
+    "server": {
+        "url_description": "Url du serveur.",
+        "url": "192.168.0.112",
+        "username_description": "Username de mosquitto.",
+        "username": "trbots",
+        "password_description":"Password de mosquitto.",
+        "password": "trbots472712",
+        "keepalive_client_description": "Maximum period in seconds allowed between communications with the broker. If no other messages are being exchanged, this controls the rate at which the client will send ping messages to the broker.",
+        "keepalive_client": 60,
+        "bind_address_client_description": "The IP address of a local network interface to bind this client to, assuming multiple interfaces exist",
+        "bind_address_client": "",
+        "websockets_port_description": "Port de connexion websockets du serveur.",
+        "websockets_port": 1883,
+        "tcp_port_description": "Port de connexion tcp au serveur.",
+        "tcp_port": 8080,
+        "client_id_description": "Identifiant unique du robot.",
+        "client_id": "turtlebot"
+    },
+    "styles": {
+    },
+    "commands": {
+        "server_is_started": {
+            "service": "cobots-service-client",
+            "command": "server_is_started",
+            "description": "Commande pour initialiser le client avec le serveur",
+            "in": {},
+            "out": {}
+        },
+        "position_event": {
+            "service": "turtlebot",
+            "command": "position_event",
+            "description": "Commande pour recevoir la position depuis l'optitrack",
+            "in": {},
+            "out": {}
+        }
+    }
+}
